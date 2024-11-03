@@ -17,7 +17,7 @@ const links =
                    
 
                     return (
-                                        <div className="navbar bg-[#9538E2] mt-4">
+                                        <div className={`navbar ${pathname === '/'? 'bg-[#9538E2]': ''} mt-4 rounded-tl-xl rounded-tr-xl`}>
 <div className="navbar-start">
 <div className="dropdown">
 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
