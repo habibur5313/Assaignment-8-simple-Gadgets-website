@@ -1,0 +1,19 @@
+
+[
+                    {
+                      "id": 1,
+                      "category": "Laptops",
+                      "slug": "Laptops"
+                    },
+                    {
+                      "id": 2,
+                      "category": "Smartphones",
+                      "slug": "Smartphones"
+                    },
+                    {
+                      "id": 3,
+                      "category": "Headphones",
+                      "slug": "Headphones"
+                    }
+                  ]
+                  

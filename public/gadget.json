@@ -1,0 +1,179 @@
+[
+                    {
+                    "product_id": 1,
+                    "product_title": "Galaxy S22",
+                    "product_image": "https://i.ibb.co.com/9qz2NkJ/images-1.jpg",
+                    "category": "Smartphones",
+                    "price": 999,
+                    "description": "Flagship phone with stunning display and performance.",
+                    "specification": ["8GB RAM", "128GB Storage", "4500mAh Battery","5G enabled"],
+                    "availability": true,
+                    "rating": 4.5 
+                    },
+                    {
+                    "product_id": 2,
+                    "product_title": "iPhone 13",
+                    "product_image": "https://i.ibb.co.com/CbX4qnb/3408-34138.jpg",
+                    "category": "Smartphones",
+                    "price": 1099,
+                    "description": "Latest iPhone with improved battery and camera.",
+                    "specification": ["6GB RAM", "256GB Storage", "3240mAh Battery"],
+                    "availability": true,
+                    "rating": 4.7
+                    },
+                    {
+                    "product_id": 3,
+                    "product_title": "Google Pixel 6",
+                    "product_image": "https://i.ibb.co.com/884z173/Google-Pixel-6-Price-in-bangladesh.jpg",
+                    "category": "Smartphones",
+                    "price": 899,
+                    "description": "Clean Android experience with powerful performance.",
+                    "specification": ["8GB RAM", "128GB Storage", "4000mAh Battery"],
+                    "availability": true,
+                    "rating": 4.6
+                   
+                    },
+                    {
+                    "product_id": 4,
+                    "product_title": "OnePlus 9",
+                    "product_image": "https://i.ibb.co.com/YLCBBMJ/images-2.jpg",
+                    "category": "Smartphones",
+                    "price": 729,
+                    "description": "Speedy performance with impressive display.",
+                    "specification": ["8GB RAM", "128GB Storage", "4500mAh Battery","Warp Charge 65T"],
+                    "availability": true,
+                    "rating": 4.4
+                  
+                    },
+                    {
+                      "product_id": 5,
+                      "product_title": "iPhone 15 Pro Max",
+                      "product_image": "https://i.ibb.co.com/K9sVqbf/i-Phone-15-Plus-2-6-5363.jpg",
+                      "category": "Smartphones",
+                      "price": 1299,
+                      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+                      "specification": [
+                        "6.7-inch Super Retina XDR display",
+                        "A17 Bionic chip",
+                        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+                        "LiDAR Scanner",
+                        "Up to 2TB storage"
+                      ],
+                      "availability": true,
+                      "rating": 4.8
+                    },
+                    {
+                      "product_id": 6,
+                      "product_title": "Samsung Galaxy S21 Ultra",
+                      "product_image": "https://i.ibb.co.com/1f6Mdjr/2103-42632.jpg",
+                      "category": "Smartphones",
+                      "price": 1199,
+                      "description": "A powerful smartphone with advanced features and stunning design.",
+                      "specification": [
+                        "6.8-inch Dynamic AMOLED display",
+                        "Exynos 2100 chip",
+                        "Quad-camera system (108MP Main, 12MP Ultrawide, 10MP Telephoto x2)",
+                        "100x Space Zoom",
+                        "Up to 1TB storage"
+                      ],
+                      "availability": true,
+                      "rating": 4.7
+                    },
+                    {
+                      "product_id": 7,
+                      "product_title": "Google Pixel 6 Pro",
+                      "product_image": "https://i.ibb.co.com/wRPzB02/3784-95312.jpg",
+                      "category": "Smartphones",
+                      "price": 999,
+                      "description": "The smartest and fastest Pixel phone yet with AI-powered features.",
+                      "specification": [
+                        "6.7-inch QHD+ OLED display",
+                        "Google Tensor chip",
+                        "Triple-camera system (50MP Main, 12MP Ultrawide, 48MP Telephoto)",
+                        "Magic Eraser",
+                        "Up to 512GB storage"
+                      ],
+                      "availability": true,
+                      "rating": 4.6
+                    },
+                    {
+                      "product_id": 8,
+                      "product_title": "Sony WH-1000XM4",
+                      "product_image": "https://i.ibb.co.com/NFRS8hC/wh1.webp",
+                      "category": "Headphones",
+                      "price": 349,
+                      "description": "Industry-leading noise-canceling headphones with premium sound quality.",
+                      "specification": [
+                        "Active Noise Cancellation",
+                        "30-hour battery life",
+                        "Touch Sensor controls",
+                        "Speak-to-Chat",
+                        "Alexa built-in"
+                      ],
+                      "availability": true,
+                      "rating": 4.9
+                    },
+                    {
+                      "product_id": 9,
+                      "product_title": "Bose QuietComfort 35 II",
+                      "product_image": "https://i.ibb.co.com/BPYq1Lx/images.jpg",
+                      "category": "Headphones",
+                      "price": 299,
+                      "description": "High-performance wireless headphones with superior noise cancellation.",
+                      "specification": [
+                        "Acoustic Noise Cancelling technology",
+                        "20-hour battery life",
+                        "Voice Assistant integration",
+                        "Bluetooth and NFC pairing",
+                        "Volume-optimized EQ"
+                      ],
+                      "availability": true,
+                      "rating": 4.8
+                    },
+                    {
+                      "product_id": 10 ,
+                      "product_title": "Jabra Elite 85t",
+                      "product_image": "https://i.ibb.co.com/Mc5gD9M/jabra-elite-85t-titanium-black-bluetooth-11612600846.webp",
+                      "category": "Headphones",
+                      "price": 229,
+                      "description": "Compact and powerful true wireless earbuds with advanced ANC.",
+                      "specification": [
+                        "Active Noise Cancellation",
+                        "HearThrough technology",
+                        "25-hour total battery life",
+                        "6-microphone call technology",
+                        "Wireless charging"
+                      ],
+                      "availability": true,
+                      "rating": 4.6
+                    },
+                    {
+                      "product_id": 11,
+                      "product_title": "Apple MacBook Pro 14-inch",
+                      "product_image": "https://i.ibb.co.com/KLGwDKb/Macbook-Pro-M1-Chip-3.webp",
+                      "category": "Laptops",
+                      "price": 1999,
+                      "description": "A powerful laptop with M1 Pro chip and stunning Liquid Retina XDR display.",
+                      "specification": [
+                                        "16-core Neural Engine",
+                                        "14-inch Liquid Retina XDR display²",
+                                        "Magic Keyboard with Touch ID",
+                                        "Force Touch trackpad",
+                                        "70W USB-C Power Adapter"
+                                      ],
+                      "availability": true,
+                      "rating": 4.6
+                      },
+                      {
+                    "product_id": 12,
+                    "product_title": "Dell XPS 13",
+                    "product_image": "https://i.ibb.co.com/HF6P9hJ/Dell-XPS-13-Plus-BD-Price-1.webp",
+                    "category": "Laptops",
+                    "price": 1200,
+                    "description": "A high-performance ultrabook with a stunning display.",
+                    "specification": ["16GB RAM", "512GB SSD", "Intel i7 Processor","Touchscreen, Backlit Keyboard"],
+                    "availability": true,
+                    "rating": 4.8 
+                    }
+                                      
+                    ]
