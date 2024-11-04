@@ -8,6 +8,10 @@ import {
 import Root from './Component/Root/Root';
 import Gadgets from './Component/Gadgets/Gadgets';
 import GadgetDetails from './Component/details/GadgetDetails';
+import Dashboard from './Component/Dashboard/Dashboard';
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 const router = createBrowserRouter([
   {
@@ -36,11 +40,28 @@ children: [
     path: '/gadget-details/:id',
     loader: () => fetch('/gadget.json'),
     element: <GadgetDetails></GadgetDetails>
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <RouterProvider router={router} />
+   <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+
+/>
   </StrictMode>,
 )
