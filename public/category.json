@@ -1,14 +1,14 @@
 
 [
+  {
+    "id": 2,
+    "category": "Smartphones",
+    "slug": "Smartphones"
+  },
                     {
                       "id": 1,
                       "category": "Laptops",
                       "slug": "Laptops"
-                    },
-                    {
-                      "id": 2,
-                      "category": "Smartphones",
-                      "slug": "Smartphones"
                     },
                     {
                       "id": 3,
