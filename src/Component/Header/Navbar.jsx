@@ -1,7 +1,9 @@
 import { NavLink, useLocation } from "react-router-dom";
+import { getGadget, getGadget2 } from "../LocalStorage/Localstorage";
+import { useEffect, useState } from "react";
 
 
-const Navbar = ({gadgets,gadgets2}) => {
+const Navbar = () => {
 
 const {pathname} = useLocation()
 
@@ -17,6 +19,19 @@ const links =
                     <li className="text-xl font-medium "><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
                    
                     </>
+
+const [carts,setCarts] = useState([])
+const [wishLists,setWishlists] = useState([])
+
+useEffect(() => {
+                    const gadgets = getGadget()
+                    setCarts(gadgets)
+},[])
+useEffect(() => {
+                    const gadgets2 = getGadget2()
+                    setWishlists(gadgets2)
+},[])
+
                    
 
                     return (
@@ -54,9 +69,9 @@ const links =
                                         </div>
                                         <div className="navbar-end">
                                         <div className='flex gap-5'>
-                                        <button className=' text-xl font-medium relative'><i className="fa-solid fa-cart-plus "></i><span className="absolute -top-1 left-4 text-[#9538E2]">{`${pathname === '/dashboard' ? gadgets.length : '' }`}</span></button>
-                                        <button className='text-xl font-medium px-3 py-1 border rounded-full relative'>
-                                        <i className="fa-regular fa-heart"></i><span className="absolute -top-1 left-7 text-[#9538E2]">{`${pathname === '/dashboard' ? gadgets2.length : '' }`}</span></button>
+                                        <button className=' text-xl font-medium relative'><i className="fa-solid fa-cart-plus"></i><span className="absolute -top-1 left-4 bg-black rounded-full text-white px-2 py-1 text-xs">{carts.length}</span></button>
+                                        <button className='text-xl font-medium px-3 py-1 border rounded-full relative'><i className="fa-regular fa-heart"></i><span className="absolute -top-1 left-7 text-white text-xs px-2 py-1 bg-black rounded-full">{wishLists.length}</span></button>
+                                       
                                       </div>
                                         </div>
                                         </div>

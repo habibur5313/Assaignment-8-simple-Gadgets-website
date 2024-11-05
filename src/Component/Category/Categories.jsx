@@ -17,7 +17,8 @@ useEffect(() => {
                                          <div role='tablist' className='tabs tabs-lifted mb-7 flex flex-col sm:flex-row'>
                                         {categories.map(category => <NavLink key={category.id} role="tab" className={({isActive}) => `tab text-3xl font-thin text-red-500 ${isActive? 'tab-active': ''}`} to={`category/${category.category}`}>
                                        {category.category}                   
-                                        </NavLink>)}                    
+                                        </NavLink>)} 
+                                        <NavLink role="tab" className={({isActive}) => `tab text-3xl font-thin text-red-500 ${isActive? 'tab-active': ''}`} to={'/allGadget'}>All Gadgets</NavLink>                   
                                         </div>                  
                                         </div>
                     );

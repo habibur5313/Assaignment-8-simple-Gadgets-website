@@ -11,6 +11,8 @@ import GadgetDetails from './Component/details/GadgetDetails';
 import Dashboard from './Component/Dashboard/Dashboard';
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Cart from './Component/addToCart/Cart';
+import Wishlist from './Component/Wishlist/Wishlist';
 
 
 const router = createBrowserRouter([
@@ -24,7 +26,16 @@ children: [
           
   path: '/',
   loader: () => fetch('/gadget.json'),
-  element: <Gadgets></Gadgets>
+  element: <Gadgets></Gadgets>,
+
+
+},
+  {
+          
+  path: '/allGadget',
+  loader: () => fetch('/gadget.json'),
+  element: <Gadgets></Gadgets>,
+    errorElement: "no data"
 
 },
   {
@@ -34,6 +45,7 @@ children: [
   element: <Gadgets></Gadgets>
 
 },
+
 ]
   },
   {
@@ -43,8 +55,24 @@ children: [
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>
-  }
+    element: <Dashboard></Dashboard>,
+
+    children: [
+      {
+        path: '/dashboard',
+            element: <Cart></Cart>
+      },
+      {
+        path: '/dashboard/cart',
+            element: <Cart></Cart>
+      },
+      {
+        path: '/dashboard/wishlist',
+        element: <Wishlist></Wishlist>
+      }
+    ]
+  
+  },
 ])
 
 createRoot(document.getElementById('root')).render(

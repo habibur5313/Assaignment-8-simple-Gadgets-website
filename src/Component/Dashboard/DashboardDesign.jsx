@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
-const Banner = () => {
-                    const {pathname} = useLocation()
+const DashboardDesign = () => {
+                  
                     return (
                                         <div>
-                                       <div className={`flex flex-col justify-center items-center ${pathname === '/'?'rounded-bl-xl rounded-br-xl': 'rounded-xl'} bg-[#9538E2] pt-10 pb-60 space-y-5 `}>
+                                       <div className={`flex flex-col justify-center items-center rounded-xl bg-[#9538E2] pt-10 pb-32 space-y-5 `}>
                                         <h1 className='lg:text-6xl md:text-3xl text-2xl  w-11/12 xl:w-10/12 text-center mx-auto text-white font-bold'>Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
                                         <p className='text-xl font-medium text-white w-11/12 md:w-10/12 mx-auto text-center'>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
-                                        <Link to={'/allGadget'}><button className='btn'>Shop now</button></Link>
+                                      <div className='flex gap-5 '>
+                                      <NavLink className={'btn text-xl font-medium'} to={'/dashboard/cart'}>Cart</NavLink>
+                                      <NavLink className={'btn text-xl font-medium'} to={'/dashboard/wishlist'}>Wishlist</NavLink>
+                                      </div>
                                         </div>                     
                                         </div>
                     );
 };
 
-export default Banner;
+export default DashboardDesign;
