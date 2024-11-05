@@ -13,6 +13,8 @@ import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Cart from './Component/addToCart/Cart';
 import Wishlist from './Component/Wishlist/Wishlist';
+import AllGadgets from './Component/AllGadgets/Allgadgets';
+import Statistic from './Component/Stastic/Statistic';
 
 
 const router = createBrowserRouter([
@@ -34,8 +36,8 @@ children: [
           
   path: '/allGadget',
   loader: () => fetch('/gadget.json'),
-  element: <Gadgets></Gadgets>,
-    errorElement: "no data"
+  element: <AllGadgets></AllGadgets>
+
 
 },
   {
@@ -73,6 +75,10 @@ children: [
     ]
   
   },
+  {
+    path: '/statistic',
+    element: <Statistic></Statistic>
+  }
 ])
 
 createRoot(document.getElementById('root')).render(

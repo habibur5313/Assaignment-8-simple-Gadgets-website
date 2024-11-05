@@ -81,23 +81,6 @@
                     },
                     {
                       "product_id": 7,
-                      "product_title": "Google Pixel 6 Pro",
-                      "product_image": "https://i.ibb.co.com/pb80Kb7/3784-95312.jpg",
-                      "category": "Smartphones",
-                      "price": 999,
-                      "description": "The smartest and fastest Pixel phone yet with AI-powered features.",
-                      "specification": [
-                        "6.7-inch QHD+ OLED display",
-                        "Google Tensor chip",
-                        "Triple-camera system (50MP Main, 12MP Ultrawide, 48MP Telephoto)",
-                        "Magic Eraser",
-                        "Up to 512GB storage"
-                      ],
-                      "availability": true,
-                      "rating": 4.6
-                    },
-                    {
-                      "product_id": 8,
                       "product_title": "Sony WH-1000XM4",
                       "product_image": "https://i.ibb.co.com/XzVgQy5/wh1.webp",
                       "category": "Headphones",
@@ -113,6 +96,25 @@
                       "availability": true,
                       "rating": 4.9
                     },
+                    {
+                      "product_id": 8,
+                      "product_title": "Google Pixel 6 Pro",
+                      "product_image": "https://i.ibb.co.com/pb80Kb7/3784-95312.jpg",
+                      "category": "Smartphones",
+                      "price": 999,
+                      "description": "The smartest and fastest Pixel phone yet with AI-powered features.",
+                      "specification": [
+                        "6.7-inch QHD+ OLED display",
+                        "Google Tensor chip",
+                        "Triple-camera system (50MP Main, 12MP Ultrawide, 48MP Telephoto)",
+                        "Magic Eraser",
+                        "Up to 512GB storage"
+                      ],
+                      "availability": true,
+                      "rating": 4.6
+                    },
+                    
+                   
                     {
                       "product_id": 9,
                       "product_title": "Bose QuietComfort 35 II",

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getGadget } from '../LocalStorage/Localstorage';
-import Gadget from '../Gadgets/Gadget';
 import CartDesign from './CartDesign';
+import { Link } from 'react-router-dom';
+import group from '..//..//assets/Group.png'
 
 const Cart = () => {
 
@@ -17,13 +18,15 @@ const Cart = () => {
              
                     
 const handleSortPrice = () => {
-                    const sorted = [...carts].sort((a,b) => a.price - b.price) 
+                    const sorted = [...carts].sort((a,b) => b.price - a.price) 
                     setCarts(sorted)
 }
 
 const handlePurcase = () => {
                     localStorage.removeItem('gadget')
+                    localStorage.removeItem('gadget2')
                     setCarts([])
+                    document.getElementById('my_modal_5').showModal()
 }
      
 const calculateTotal = () => { 
@@ -40,7 +43,21 @@ return (
                                                <h2 className='text-2xl font-medium md:text-3xl md:font-semibold lg:text-4xl lg:font-bold'>Total Cost: {calculateTotal()}$</h2>
                                                <button onClick={handleSortPrice} className='btn text-xl font-medium text-[#9538E2]'>Sort by price</button>
                                                <button onClick={handlePurcase} className='btn bg-[#9538E2] text-xl font-medium text-white'>Purcase</button>
-                                                                                     
+                                                
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box flex flex-col items-center justify-center">
+   <img className='' src={group} alt="" />
+    <h3 className="font-bold text-lg">Payment Successfully</h3>
+    <p className="">Thanks for purchasing.</p>
+    <p className="">    Total: {calculateTotal()}</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+       <Link to={'/'} className='btn'>Close</Link>
+      </form>
+    </div>
+  </div>
+</dialog>                                     
                                                   </div>
                                                             </div>
                                          

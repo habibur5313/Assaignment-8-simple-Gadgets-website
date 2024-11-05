@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 a.active {
-                    background-color: rebeccapurple;
+                    background-color: green;
+                    color: white;
+}
+
+html{
+                    overflow-y: scroll;
 }

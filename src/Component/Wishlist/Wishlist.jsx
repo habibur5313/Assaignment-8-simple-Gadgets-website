@@ -13,7 +13,7 @@ useEffect(() => {
 },[])
 
 const handleSortPrice = () => {
-                    const sorted = [...wishlists].sort((a,b) => a.price - b.price) 
+                    const sorted = [...wishlists].sort((a,b) => b.price - a.price  ) 
                     setWishlists(sorted)
 }
 

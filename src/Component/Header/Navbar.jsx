@@ -15,7 +15,7 @@ const links =
                   
                     <>
                     <li className="text-xl font-medium "><NavLink to={'/'}>Home</NavLink></li>
-                    <li className="text-xl font-medium "><NavLink to={'/stastic'}>Listed Books</NavLink></li>
+                    <li className="text-xl font-medium "><NavLink to={'/statistic'}>Listed Books</NavLink></li>
                     <li className="text-xl font-medium "><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
                    
                     </>
@@ -35,7 +35,7 @@ useEffect(() => {
                    
 
                     return (
-                                        <div className={`navbar ${pathname === '/'? 'bg-[#9538E2]': ''} mt-4 rounded-tl-xl rounded-tr-xl`}>
+                                        <div className={`navbar ${pathname === '/'? 'bg-[#9538E2]': ''} mt-4 rounded-tl-xl rounded-tr-xl `}>
                                         <div className="navbar-start">
                                         <div className="dropdown">
                                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

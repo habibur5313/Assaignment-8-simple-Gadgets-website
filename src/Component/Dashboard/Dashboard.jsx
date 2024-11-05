@@ -7,16 +7,18 @@ import { Outlet } from 'react-router-dom';
 const Dashboard = () => {
 
 
-// const gadgets2 = getGadget2()
+
 
 
                     return (
-                                       <div className='container mx-auto'>
+                                       <>
+                                       <div className='container mx-auto min-h-[calc(100vh-203px)]'>
                                         <Navbar></Navbar>
                                         <DashboardDesign></DashboardDesign>
                                         <Outlet></Outlet>
-                                        <Footer></Footer>
                                        </div>
+                                        <Footer></Footer>
+                                       </>
                     );
 };
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useLocation, useParams } from 'react-router-dom';
-import Gadget from './Gadget';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLoaderData, useLocation, useParams } from 'react-router-dom';
+import Gadget from '../Gadgets/Gadget';
 
-const Gadgets = () => {
+
+
+const AllGadgets = () => {
 
 
                     const {category} = useParams()
@@ -20,23 +21,23 @@ useEffect(() => {
                     }
                     else{
                      
-                    setGadgets(loader.slice(0,7))
+                    setGadgets(loader)
                   
                     }
 },[loader,category])
 
-const [categories,setCategories] = useState([])
-useEffect(() => {
-                    fetch('/category.json')
-                    .then(res => res.json())
-                    .then(data => setCategories(data)
-                    )},[])
+// const [categories,setCategories] = useState([])
+// useEffect(() => {
+//                     fetch('/category.json')
+//                     .then(res => res.json())
+//                     .then(data => setCategories(data)
+//                     )},[])
 
 
                     return (
                       <div className='flex flex-col lg:flex-row'>
                      
-                      <div className=' lg:w-1/4 flex flex-col  gap-4 mx-10 mt-2 mb-4 lg:mb-0'>
+                      <div className=' lg:w-1/4 flex flex-col gap-4 mx-10 mt-2 mb-4 lg:mb-0'>
                  <NavLink  className={'btn'} to={`/category/Smartphones`}>Smartphones</NavLink>
                   <NavLink className={'btn'} to={`/category/Laptops`}>Laptops</NavLink>
                  <NavLink className={'btn'} to={`/category/Headphones`}>Headphones</NavLink>
@@ -44,13 +45,13 @@ useEffect(() => {
                <NavLink className={'btn'} to={`/category/chargers`}>Chargers</NavLink>
                <NavLink className={'btn'} to={`/category/powerBanks`}>Power Banks</NavLink>
                <NavLink className={'btn'} to={`/allGadget`}>All Gadgets</NavLink>
-           
                       </div>
                                     <div className='grid lg:w-3/4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                                           {gadgets.map(gadget => <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)}                 
                                         </div>
                                         </div>
+                                 
                     );
 };
 
-export default Gadgets;
+export default AllGadgets;

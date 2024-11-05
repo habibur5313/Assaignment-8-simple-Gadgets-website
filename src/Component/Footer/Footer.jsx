@@ -1,8 +1,14 @@
+import { useLocation } from "react-router-dom";
 
 
-const Footer = () => {
+const Footer = ({id}) => {
+
+const {pathname} = useLocation()
+console.log(pathname);
+
                     return (
-                                        <footer className="footer bg-neutral text-neutral-content p-10 mt-80">
+                                        <div className={`navbar ${pathname === `/gadget-details/${id}`? 'mt-[500px]': ''} mt-4 rounded-tl-xl rounded-tr-xl `}>
+                                          <footer className={` footer bg-neutral text-neutral-content p-10`}>
                                         <nav>
                                           <h6 className="footer-title">Services</h6>
                                           <a className="link link-hover">Branding</a>
@@ -24,6 +30,7 @@ const Footer = () => {
                                           <a className="link link-hover">Cookie policy</a>
                                         </nav>
                                       </footer>
+                                        </div>
                     );
 };
 

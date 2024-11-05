@@ -17,10 +17,15 @@ const [addToChart, setAddToChart] = useState(false)
 const [addToLove, setAddToLove] = useState(false)
 
 
+console.log(data);
+
+
 useEffect(() => {
+                  
                   
                     const filterd = data.find(gadget => gadget.product_id === idNum)
                     setDetails(filterd);
+                   
 
                     const addChart = getGadget()
                    const isExist = addChart.find(item => item.product_id == filterd.product_id)
@@ -62,31 +67,28 @@ const handleLove = () => {
 }
 
 
-
-
-
-
-
-
                     return (
-                                        <div className='container mx-auto'>
-                                       <div className='relative'>
+
+                                        <div className=''>
+                                       <div className='relative container mx-auto'>
                                           <Navbar></Navbar>
                                         <DetailsDesign></DetailsDesign>
                                         <div className='lg:w-10/12  border p-3 bg-white rounded-xl  absolute top-80 lg:left-[8%] '>
-                                        <div className=' h-[500px]  rounded-xl flex flex-col sm:flex-row ' >
+                                        <div className='  rounded-xl flex flex-col sm:flex-row ' >
                                       <img className='h-[100%] w-[50%] rounded-xl' src={product_image} alt="" /> 
-                                      <div>
-                                        <h1>{product_title}</h1>
-                                        <h3>{price}</h3>
-                                        <button className='btn text-green-400'>stock</button>
-                                        <p>{description}</p>
-                                        <p>Specification</p>
+                                      <div className=' space-y-4'>
+                                        <h1 className='text-3xl font-bold'>{product_title}</h1>
+                                        <h3 className='text-xl font-bold'>Price: $ {price}</h3>
+                                        <span className='btn border text-green-400'>stock</span>
+                                        <p className='text-xl font-medium text-gray-600'>{description}</p>
+                                        <p className='text-2xl font-semibold'>Specification</p>
                                         <ol style={{ listStyleType: "number" }}>
-                                      {specification.map((spec,idx) => <li key={idx}>{spec}</li>)}
+                                      {specification.map((spec,idx) => <li className='text-xl ml-4' key={idx}>{spec}</li>)}
                                       </ol>
-                                      <h4>Rating</h4>
-                                      <p>{rating}</p>
+                                      <div className='flex gap-10 items-center'>
+                                      <h4 className='text-2xl font-medium'>Rating</h4>
+                                      <p className='text-xl'>{rating}</p>
+                                      </div>
                                       <div className='flex gap-5'>
                                         <button onClick={handleChart} disabled={addToChart}  className='btn bg-[#9538E2] text-xl font-medium text-white'>Add to Chart<i className="fa-solid fa-cart-plus "></i></button>
                                         <button onClick={handleLove} disabled={addToLove} className='text-xl font-medium px-3 py-1 border rounded-full'><i className="fa-regular fa-heart"></i></button>
@@ -95,8 +97,8 @@ const handleLove = () => {
                                         </div> 
 
                                         </div>
-                                        <Footer></Footer>
                                       </div>
+                                        <Footer id={id}></Footer>
                                       </div>
                     );
 };
