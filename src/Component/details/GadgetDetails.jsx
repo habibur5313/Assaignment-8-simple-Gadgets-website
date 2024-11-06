@@ -30,22 +30,27 @@ useEffect(() => {
                   
                     const filterd = data.find(gadget => gadget.product_id === idNum)
                     setDetails(filterd);
-                   
+                   const addLove = getGadget2()
+                    const isExist2 = addLove.find(item => item.product_id === filterd.product_id)
+                    if(isExist2){
+                     setAddToLove(true)
+                    }
+             
+                    
+},[data,idNum])
 
-                    const addChart = getGadget()
-                   const isExist = addChart.find(item => item.product_id == filterd.product_id)
+useEffect(() => {
+                  
+                  
+                    const filterd = data.find(gadget => gadget.product_id === idNum)
+                    setDetails(filterd);
+                   const addChart = getGadget()
+                   const isExist = addChart.find(item => item.product_id === filterd.product_id)
                    if(isExist){
                    setAddToChart(true)
                   
                    }
-                    const addLove = getGadget2()
-                   const isExist2 = addLove.find(item => item.product_id == filterd.product_id)
-                   if(isExist2){
-                    setAddToChart(true)
-                   }
-                    
-
-                   
+             
                     
 },[data,idNum])
 
@@ -60,15 +65,15 @@ if(!Array.isArray(specification)){
 
 
 const handleChart = () => {
-  toast.success('Item added Successfully')
+  toast.success(` ${product_title} add to cart Successfully`)
   addToLStorage(details)
   setAddToChart(!addToChart)
 }
 
 const handleLove = () => {
+  toast.success(`${product_title} add to wishlist Successfully`)
   addToLStorage2(details)
   setAddToLove(!addToLove)
-  toast.success('Item added Successfully')
 }
 
 
@@ -84,7 +89,8 @@ const handleLove = () => {
                                       <div className=' space-y-4'>
                                         <h1 className='text-3xl font-bold'>{product_title}</h1>
                                         <h3 className='text-xl font-bold'>Price: $ {price}</h3>
-                                        <span className='btn border text-green-400'>stock</span>
+                                        <button className={`btn text-xl font-medium ${availability ? 'text-green-400': 'text-red-500'}`}>{availability ? 'stock' : 'out of stock'}</button>
+                                        
                                         <p className='text-xl font-medium text-gray-600'>{description}</p>
                                         <p className='text-2xl font-semibold'>Specification</p>
                                         <ol style={{ listStyleType: "number" }}>
@@ -96,7 +102,7 @@ const handleLove = () => {
                                       </div>
                                       <div className='flex gap-5'>
                                         <button onClick={handleChart} disabled={addToChart}  className='btn bg-[#9538E2] text-xl font-medium text-white'>Add to Chart<i className="fa-solid fa-cart-plus "></i></button>
-                                        <button onClick={handleLove} disabled={addToLove} className='text-xl font-medium px-3 py-1 border rounded-full'><i className="fa-regular fa-heart"></i></button>
+                                        <button onClick={handleLove}  disabled={addToLove} className='text-xl font-medium px-3 py-1 border rounded-full'><i className="fa-regular fa-heart"></i></button>
                                       </div>
                                         </div>                     
                                         </div> 

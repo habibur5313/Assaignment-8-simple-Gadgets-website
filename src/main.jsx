@@ -17,13 +17,14 @@ import AllGadgets from './Component/AllGadgets/Allgadgets';
 import Statistic from './Component/Stastic/Statistic';
 import Faq from './Component/FAQ/Faq';
 import Contact from './Component/Contact/Contact';
+import Error from './Component/Error/Error';
 
 
 const router = createBrowserRouter([
   {
 path: '/',
 element: <Root></Root>,
-errorElement: '404 not found',
+errorElement: <Error></Error>,
 
 children: [
   {

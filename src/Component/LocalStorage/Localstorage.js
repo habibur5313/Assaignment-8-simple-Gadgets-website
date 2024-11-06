@@ -15,7 +15,7 @@ const addToLStorage = gadget => {
                     localStorage.setItem('gadget',gadgetStringify)
 }
 
-export {addToLStorage, getGadget};
+
 
 const getGadget2 = () => {
                     const StoredGadget = localStorage.getItem('gadget2')
@@ -28,10 +28,10 @@ const getGadget2 = () => {
 }
 
 const addToLStorage2 = gadget => {
-                    const StoredGadget = getGadget()
+                    const StoredGadget = getGadget2()
                     StoredGadget.push(gadget)
                     const gadgetStringify = JSON.stringify(StoredGadget)
                     localStorage.setItem('gadget2',gadgetStringify)
 }
 
-export {addToLStorage2, getGadget2};
+export {addToLStorage, getGadget, addToLStorage2, getGadget2 };

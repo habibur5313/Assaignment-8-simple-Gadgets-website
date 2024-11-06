@@ -12,6 +12,14 @@ useEffect(() => {
                     setWishlists(wishlist)
 },[])
 
+const handleDelete = (id) => {
+   const filterd = wishlists.filter(wishlist => wishlist.product_id !== id)
+   setWishlists(filterd);
+
+   
+   
+ } 
+
 const handleSortPrice = () => {
                     const sorted = [...wishlists].sort((a,b) => b.price - a.price  ) 
                     setWishlists(sorted)
@@ -37,7 +45,7 @@ const calculateTotal = () => {
                                                   </div>
                                                   </div>
                                          
-                                       {wishlists.map(wishlist => <CartDesign key={wishlist.product_id} cart={wishlist}></CartDesign>
+                                       {wishlists.map(wishlist => <CartDesign handleDelete={handleDelete} key={wishlist.product_id} cart={wishlist}></CartDesign>
                                        )}                   
                                                          
                                         </div>

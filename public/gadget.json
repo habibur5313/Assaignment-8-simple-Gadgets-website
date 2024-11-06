@@ -29,7 +29,7 @@
                     "price": 899,
                     "description": "Clean Android experience with powerful performance.",
                     "specification": ["8GB RAM", "128GB Storage", "4000mAh Battery"],
-                    "availability": true,
+                    "availability": false,
                     "rating": 4.6
                    
                     },
@@ -59,7 +59,7 @@
                         "LiDAR Scanner",
                         "Up to 2TB storage"
                       ],
-                      "availability": true,
+                      "availability": false,
                       "rating": 4.8
                     },
                     {
@@ -146,7 +146,7 @@
                         "6-microphone call technology",
                         "Wireless charging"
                       ],
-                      "availability": true,
+                      "availability": false,
                       "rating": 4.6
                     },
                     {
