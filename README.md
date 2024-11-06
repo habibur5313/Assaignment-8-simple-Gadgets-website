@@ -2,9 +2,9 @@
 - Gadget $ gear.
 
 # Live link
-- humdrum-bird.surge.sh
+- https://humdrum-bird.surge.sh/
 
-# git hun link
+# github link
 https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-habibur5313
 
 # List of React Fundamental concepts used in this project
