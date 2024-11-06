@@ -15,6 +15,8 @@ import Cart from './Component/addToCart/Cart';
 import Wishlist from './Component/Wishlist/Wishlist';
 import AllGadgets from './Component/AllGadgets/Allgadgets';
 import Statistic from './Component/Stastic/Statistic';
+import Faq from './Component/FAQ/Faq';
+import Contact from './Component/Contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -78,6 +80,14 @@ children: [
   {
     path: '/statistic',
     element: <Statistic></Statistic>
+  },
+  {
+    path: '/gadgets/faq',
+    element: <Faq></Faq>
+  },
+  {
+    path: '/contact',
+    element: <Contact></Contact>
   }
 ])
 

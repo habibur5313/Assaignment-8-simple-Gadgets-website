@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom";
 const Footer = ({id}) => {
 
 const {pathname} = useLocation()
-console.log(pathname);
+
 
                     return (
-                                        <div className={`navbar ${pathname === `/gadget-details/${id}`? 'mt-[500px]': ''} mt-4 rounded-tl-xl rounded-tr-xl `}>
+                                        <div className={`navbar ${pathname === `/gadget-details/${id}`? 'md:mt-[500px] mt-[620px]': ''} mt-4 rounded-tl-xl rounded-tr-xl `}>
                                           <footer className={` footer bg-neutral text-neutral-content p-10`}>
                                         <nav>
                                           <h6 className="footer-title">Services</h6>

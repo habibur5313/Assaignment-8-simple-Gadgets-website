@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Header/Navbar';
 import DashboardDesign from './DashboardDesign';
@@ -7,7 +8,9 @@ import { Outlet } from 'react-router-dom';
 const Dashboard = () => {
 
 
-
+                    useEffect(() =>{
+                                        document.title="Dashboard | Gadget & Gear"
+                                       },[])
 
 
                     return (

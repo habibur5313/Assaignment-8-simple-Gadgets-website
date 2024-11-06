@@ -8,6 +8,11 @@ import { toast } from 'react-toastify';
 
 const GadgetDetails = () => {
 
+
+  useEffect(() =>{
+    document.title="Gadget-Details | Gadget & Gear"
+   },[])
+
 const data = useLoaderData()
 const {id} = useParams()
 const idNum = parseInt(id)
@@ -17,7 +22,7 @@ const [addToChart, setAddToChart] = useState(false)
 const [addToLove, setAddToLove] = useState(false)
 
 
-console.log(data);
+
 
 
 useEffect(() => {

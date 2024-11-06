@@ -23,12 +23,15 @@ const handleSortPrice = () => {
 }
 
 const handlePurcase = () => {
-                    localStorage.removeItem('gadget')
-                    localStorage.removeItem('gadget2')
-                    setCarts([])
-                    document.getElementById('my_modal_5').showModal()
+  localStorage.removeItem('gadget')
+  localStorage.removeItem('gadget2')
+               document.getElementById('my_modal_5').showModal()
 }
-     
+   
+const handlePurchase = () => {
+
+  setCarts([])
+}
 const calculateTotal = () => { 
                     return carts.reduce((total, item) => total + item.price, 0);
 }
@@ -48,12 +51,12 @@ return (
   <div className="modal-box flex flex-col items-center justify-center">
    <img className='' src={group} alt="" />
     <h3 className="font-bold text-lg">Payment Successfully</h3>
-    <p className="">Thanks for purchasing.</p>
-    <p className="">    Total: {calculateTotal()}</p>
+    <p className="text-xl">Thanks for purchasing.</p>
+    <p className="text-xl">    Total: {calculateTotal()}$</p>
     <div className="modal-action">
       <form method="dialog">
         {/* if there is a button in form, it will close the modal */}
-       <Link to={'/'} className='btn'>Close</Link>
+       <Link to={'/'} className='btn btn-accent'><button onClick={handlePurchase}>Close</button></Link>
       </form>
     </div>
   </div>

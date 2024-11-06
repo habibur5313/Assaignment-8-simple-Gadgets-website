@@ -34,6 +34,8 @@ useEffect(() => {
 
 
                     return (
+                      <>
+                      <h1 className='text-4xl font-bold text-center mb-5 text-[#9538E2]'>Explore Cutting-Edge Gadgets</h1>
                       <div className='flex flex-col lg:flex-row'>
                      
                       <div className=' lg:w-1/4 flex flex-col  gap-4 mx-10 mt-2 mb-4 lg:mb-0'>
@@ -50,6 +52,7 @@ useEffect(() => {
                                           {gadgets.map(gadget => <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)}                 
                                         </div>
                                         </div>
+                                        </>
                     );
 };
 

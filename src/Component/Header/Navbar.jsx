@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { getGadget, getGadget2 } from "../LocalStorage/Localstorage";
 import { useEffect, useState } from "react";
+import { document } from "postcss";
 
 
 const Navbar = () => {
@@ -11,12 +12,15 @@ const {pathname} = useLocation()
 
 
 
+
 const links = 
                   
                     <>
-                    <li className="text-xl font-medium "><NavLink to={'/'}>Home</NavLink></li>
-                    <li className="text-xl font-medium "><NavLink to={'/statistic'}>Listed Books</NavLink></li>
+                    <li  className="text-xl font-medium "><NavLink to={'/'}>Home</NavLink></li>
+                    <li className="text-xl font-medium "><NavLink to={'/statistic'}>Statistic</NavLink></li>
                     <li className="text-xl font-medium "><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+                    <li className="text-xl font-medium "><NavLink to={'/contact'}>Contact Us</NavLink></li>
+                    <li className="text-xl font-medium "><NavLink to={'/gadgets/faq'}>FAQ</NavLink></li>
                    
                     </>
 
@@ -32,7 +36,6 @@ useEffect(() => {
                     setWishlists(gadgets2)
 },[])
 
-                   
 
                     return (
                                         <div className={`navbar ${pathname === '/'? 'bg-[#9538E2]': ''} mt-4 rounded-tl-xl rounded-tr-xl `}>
