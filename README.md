@@ -28,3 +28,6 @@ https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-habibur5313
 - You can purchase or remove it from the dashboard.
 - If there are more items, you can sort by price.
 - You can contact through contact us.
+
+# Mark
+- 60 Out of 60.
